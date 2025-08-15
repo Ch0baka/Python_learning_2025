@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plan de Aprendizaje: Desarrollo en Python + IA (Actualizado)</title>
+<style>
+  body {
+    background-color: #121212;
+    color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+  main {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+  }
+  h1, h2 {
+    color: #ffa500; /* Color naranja para títulos principales */
+  }
+  h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+  h2 {
+    font-size: 1.5em;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+  }
+  h3 {
+    font-size: 1.2em;
+    margin-top: 1em;
+    margin-bottom: 0.3em;
+  }
+  a {
+    color: #ffa500;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  /* Dashboard de progreso */
+  #dashboard {
+    background: #1e1e1e;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 1.5em;
+  }
+  .progress-container {
+    background: #444;
+    border-radius: 5px;
+    overflow: hidden;
+    flex: 1;
+    margin: 5px 0;
+    position: relative;
+  }
+  .progress-container.large {
+    height: 20px;
+  }
+  .progress-container.small {
+    height: 10px;
+  }
+  .progress-bar {
+    background: #ffa500;
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s;
+  }
+  .category-progress {
+    display: flex;
+    align-items: center;
+    margin: 4px 0;
+  }
+  .category-progress .cat-name {
+    flex: 0 0 180px;
+  }
+  .category-progress .percent-value {
+    flex: 0 0 50px;
+    text-align: right;
+    margin-left: 10px;
+  }
+  /* Estilos para checkboxes */
+  input[type=checkbox] {
+    accent-color: #ffa500;
+    transform: translateY(2px);
+    margin-right: 5px;
+  }
+  label {
+    cursor: pointer;
+  }
+  /* Listas de tareas */
+  ul {
+    list-style: none;
+    padding-left: 1em;
+  }
+  ul li {
+    margin: 4px 0;
+  }
+  ul ul {
+    list-style-type: circle;
+    padding-left: 1.5em;
+  }
+  ul ul li::marker {
+    color: #ffa500;
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Plan de Aprendizaje: Desarrollo en Python + IA (Actualizado)</h1>
+  <p><em>Basado en 1 hora diaria de estudio (7 horas semanales), este plan realista se extiende por <strong>14 semanas</strong> para lograr competencias sólidas en desarrollo Python aplicado a IA, con un enfoque práctico. Se han incorporado módulos sobre prototipado rápido de aplicaciones de IA generativa y otros temas avanzados para completar la formación.</em></p>
+
+  <div id="dashboard">
+    <h2>Progreso del Aprendizaje</h2>
+    <p><strong>Progreso general: <span id="overall-percent">0%</span></strong></p>
+    <div class="progress-container large"><div id="overall-progress-bar" class="progress-bar"></div></div>
+    <p><strong>Avance por concepto:</strong></p>
+    <div class="category-progress"><span class="cat-name">Python básico:</span>
+      <div class="progress-container small"><div id="bar-python" class="progress-bar"></div></div>
+      <span id="percent-python" class="percent-value">0%</span>
+    </div>
+    <div class="category-progress"><span class="cat-name">Data Science y ML:</span>
+      <div class="progress-container small"><div id="bar-datasci" class="progress-bar"></div></div>
+      <span id="percent-datasci" class="percent-value">0%</span>
+    </div>
+    <div class="category-progress"><span class="cat-name">IA Generativa:</span>
+      <div class="progress-container small"><div id="bar-genai" class="progress-bar"></div></div>
+      <span id="percent-genai" class="percent-value">0%</span>
+    </div>
+    <div class="category-progress"><span class="cat-name">Prototipado GenAI (Streamlit):</span>
+      <div class="progress-container small"><div id="bar-streamlit" class="progress-bar"></div></div>
+      <span id="percent-streamlit" class="percent-value">0%</span>
+    </div>
+    <div class="category-progress"><span class="cat-name">APIs y Proyecto:</span>
+      <div class="progress-container small"><div id="bar-fastapi" class="progress-bar"></div></div>
+      <span id="percent-fastapi" class="percent-value">0%</span>
+    </div>
+    <div class="category-progress"><span class="cat-name">Temas Avanzados:</span>
+      <div class="progress-container small"><div id="bar-advanced" class="progress-bar"></div></div>
+      <span id="percent-advanced" class="percent-value">0%</span>
+    </div>
+  </div>
+
+  <h2>Semanas 1-3: Fundamentos de Python (3 semanas)</h2>
+  <p><strong>Objetivo:</strong> Dominar la sintaxis esencial de Python y configurar un entorno de desarrollo profesional.</p>
+  <p><strong>Recursos principales:</strong></p>
+  <ul>
+    <li><a href="https://learn.microsoft.com/es-es/training/paths/beginner-python/">Python for Beginners (Microsoft Learn)</a>: módulos oficiales (contenido en español parcial).</li>
+    <li><a href="https://www.w3schools.com/python/">W3Schools Python Tutorial</a>: referencia práctica con ejemplos ejecutables en línea.</li>
+    <li><a href="https://www.youtube.com/watch?v=kqtD5dpn9C8">Programming with Mosh - Python in 1 Hour</a>: introducción intensiva en video (gratuito).</li>
+  </ul>
+  <h3>Semana 1: Configuración y sintaxis básica</h3>
+  <ul>
+    <li><label><input type="checkbox" data-cat="python"> Días 1-2: Instalación de Python 3.10+ y VS Code; configuración de entorno virtual (virtualenv).</label></li>
+    <li><label><input type="checkbox" data-cat="python"> Días 3-5: Variables, tipos de datos, operadores y control de flujo (<code>if/else</code>, bucles).</label></li>
+    <li><label><input type="checkbox" data-cat="python"> Días 6-7: Funciones básicas, manejo de cadenas (strings) y estructuras de datos como listas.</label></li>
+  </ul>
+  <h3>Semana 2: Estructuras de datos y archivos</h3>
+  <ul>
+    <li><label><input type="checkbox" data-cat="python"> Días 1-3: Uso de estructuras de datos básicas: listas, tuplas, diccionarios y sets.</label></li>
+    <li><label><input type="checkbox" data-cat="python"> Días 4-5: Manejo de archivos: lectura/escritura de ficheros de texto; trabajo con formatos CSV y JSON.</label></li>
+    <li><label><input type="checkbox" data-cat="python"> Días 6-7: Expresiones regulares básicas y uso de módulos estándar (<code>os</code> y <code>sys</code>).</label></li>
+  </ul>
+  <h3>Semana 3: Programación Orientada a Objetos básica</h3>
+  <ul>
+    <li><label><input type="checkbox" data-cat="python"> Días 1-3: Introducción a POO: definición de clases, creación de objetos, métodos y atributos.</label></li>
+    <li><label><input type="checkbox" data-cat="python"> Días 4-5: Manejo de errores con <code>try/except</code>; creación y uso de módulos propios e imports.</label></li>
+    <li><label><input type="checkbox" data-cat="python"> Días 6-7: Mini-proyecto: script de línea de comandos que procesa logs del sistema y genera reportes en formato CSV.</label></li>
+  </ul>
+
+  <h2>Semanas 4-6: Introducción a Data Science con Python (3 semanas)</h2>
+  <p><strong>Objetivo:</strong> Manejar datos con pandas/NumPy y construir el primer modelo de Machine Learning.</p>
+  <p><strong>Recursos principales:</strong></p>
+  <ul>
+    <li><a href="https://www.youtube.com/watch?v=ybhnBFvYryQ">Machine Learning Course (Intellipaat, 2025)</a>: curso gratuito en video, actualizado al 2025.</li>
+    <li><a href="https://www.youtube.com/watch?v=RvcBDBtO_E8">Python Machine Learning Crash Course</a>: proyecto completo de ML en 1 hora (YouTube).</li>
+    <li><a href="https://scikit-learn.org/stable/">Documentación de Scikit-learn</a>: guías oficiales y tutoriales paso a paso.</li>
+  </ul>
+  <h3>Semana 4: Herramientas de datos</h3>
+  <ul>
+    <li><label><input type="checkbox" data-cat="datasci"> Días 1-3: Instalación de bibliotecas para ciencia de datos; conceptos básicos de NumPy y pandas.</label></li>
+    <li><label><input type="checkbox" data-cat="datasci"> Días 4-5: Carga de datos desde archivos (CSV/Excel); exploración inicial con <code>head()</code>, <code>info()</code>, <code>describe()</code>.</label></li>
+    <li><label><input type="checkbox" data-cat="datasci"> Días 6-7: Limpieza básica de datos: manejo de valores faltantes, eliminación de duplicados y filtrado de datos.</label></li>
+  </ul>
+  <h3>Semana 5: Visualización y análisis</h3>
+  <ul>
+    <li><label><input type="checkbox" data-cat="datasci"> Días 1-3: Visualización con matplotlib: creación de gráficos simples de líneas, barras y histogramas.</label></li>
+    <li><label><input type="checkbox" data-cat="datasci"> Días 4-5: Análisis exploratorio: cálculo de correlaciones y agrupamiento de datos con <code>groupby()</code>.</label></li>
+    <li><label><input type="checkbox" data-cat="datasci"> Días 6-7: Preparación de datos para ML: normalización de características y división de conjunto de entrenamiento/prueba.</label></li>
+  </ul>
+  <h3>Semana 6: Primer modelo de ML</h3>
+  <ul>
+    <li><label><input type="checkbox" data-cat="datasci"> Días 1-3: Fundamentos de Machine Learning: aprendizaje supervisado vs no supervisado; problemas de clasificación vs regresión.</label></li>
+    <li><label><input type="checkbox" data-cat="datasci"> Días 4-5: Implementación práctica: entrenamiento de un modelo de Regresión Logística usando scikit-learn (clasificación binaria).</label></li>
+    <li><label><input type="checkbox" data-cat="datasci"> Días 6-7: Proyecto: clasificador de eventos de log (normal vs sospechoso) empleando datos procesados del proyecto de la Semana 3.</label></li>
+  </ul>
+
+  <h2>Semanas 7-9: IA Generativa e Integración de LLMs (3 semanas)</h2>
+  <p><strong>Objetivo:</strong> Entender los fundamentos de los modelos de lenguaje (LLMs) e integrarlos en aplicaciones Python, aplicando prácticas de IA responsable.</p>
+  <p><strong>Recursos principales:</strong></p>
+  <ul>
+    <li><a href="https://www.deeplearning.ai/short-courses/ai-python-for-beginners/">AI Python for Beginners (DeepLearning.AI)</a>: curso introductorio a IA con Python (Andrew Ng, gratuito, en inglés).</li>
+    <li><a href="https://learn.microsoft.com/es-es/ai/">Microsoft Learn AI Center</a>: módulos sobre IA responsable y fundamentos de prompt engineering.</li>
+    <li><a href="https://platform.openai.com/docs/introduction">OpenAI API Documentation</a>: documentación oficial y ejemplos de uso de las APIs de OpenAI (para generación de texto).</li>
+  </ul>
+  <h3>Semana 7: Conceptos de IA Generativa</h3>
+  <ul>
+    <li><label><input type="checkbox" data-cat="genai"> Días 1-3: Fundamentos de los LLMs: cómo funcionan los modelos de lenguaje, concepto de tokens, parámetros como <em>temperature</em> y uso de <em>embeddings</em>.</label></li>
+    <li><label><input type="checkbox" data-cat="genai"> Días 4-5: Configuración de acceso a APIs de IA: creación de cuentas gratuitas (ej. OpenAI, Google Cloud AI) y obtención de keys para usar servicios de LLM.</label></li>
+    <li><label><input type="checkbox" data-cat="genai"> Días 6-7: Primer experimento: script sencillo que genera texto a partir de <em>prompts</em> básicos utilizando una API de LLM (ej: GPT-3.5 de OpenAI).</label></li>
+  </ul>
+  <h3>Semana 8: Prompt engineering e integración de respuestas</h3>
+  <ul>
+    <li><label><input type="checkbox" data-cat="genai"> Días 1-3: Técnicas de <em>prompt engineering</em>: cómo formular indicaciones efectivas para obtener respuestas útiles en tareas técnicas.</label></li>
+    <li><label><input type="checkbox" data-cat="genai"> Días 4-5: Manejo de las respuestas del LLM: parseo de salidas (por ejemplo, JSON), validaciones básicas y control de calidad de la respuesta.</label></li>
+    <li><label><input type="checkbox" data-cat="genai"> Días 6-7: Registro (<em>logging</em>) de interacciones con la API, gestión de límites de tasa de peticiones y seguimiento de costos de uso.</label></li>
+  </ul>
+  <h3>Semana 9: Aplicación práctica con LLM</h3>
+  <ul>
+    <li><label><input type="checkbox" data-cat="genai"> Días 1-5: Proyecto integrador – <strong>Asistente de Análisis SOC</strong>: desarrollo de un asistente que, dado un reporte de incidente de ciberseguridad en texto libre (input), genere como salida la severidad estimada, pasos de contención recomendados y consultas SIEM sugeridas.</label></li>
+    <li><label><input type="checkbox" data-cat="genai"> Días 6-7: Pruebas del asistente con casos de ejemplo, documentación de uso de la herramienta y refinamiento final de los prompts o reglas según los resultados obtenidos.</label></li>
+  </ul>
+
+  <h2>Semana 10: Prototipado Rápido de Apps GenAI con Streamlit (1 semana)</h2>
+  <p><strong>Objetivo:</strong> Aprender a crear rápidamente aplicaciones web interactivas que integren IA generativa utilizando la librería Streamlit, siguiendo un enfoque de prototipo.</p>
+  <p><strong>Recursos principales:</strong></p>
+  <ul>
+    <li><a href="https://www.coursera.org/learn/fast-prototyping-of-genai-apps-with-streamlit">Fast Prototyping of GenAI Apps with Streamlit</a> (DeepLearning.AI): curso corto sobre creación rápida de aplicaciones con Streamlit y LLMs (en inglés).</li>
+    <li><a href="https://docs.streamlit.io/">Documentación oficial de Streamlit</a>: guía de uso de componentes y despliegue de aplicaciones Streamlit.</li>
+  </ul>
+  <h3>Semana 10: Desarrollo rápido con Streamlit</h3>
+  <ul>
+    <li><label><input type="checkbox" data-cat="streamlit"> Días 1-2: Introducción al prototipado rápido. Instalación de Streamlit y primeros pasos: creación de una aplicación mínima local con entrada de texto y respuesta en pantalla.</label></li>
+    <li><label><input type="checkbox" data-cat="streamlit"> Días 3-4: Construcción de un chatbot básico en Streamlit integrando una API de modelo de lenguaje (LLM) para generar respuestas a preguntas del usuario.</label></li>
+    <li><label><input type="checkbox" data-cat="streamlit"> Días 5-6: Mejora del prototipo: incorporación de técnicas de prompt engineering para refinar respuestas y concepto de RAG (búsqueda de información en datos propios) para dar contexto a las respuestas (por ejemplo, cargar un pequeño conjunto de datos y consultarlo).</label></li>
+    <li><label><input type="checkbox" data-cat="streamlit"> Día 7: Despliegue y feedback: publicación de la aplicación en Streamlit Community Cloud (o plataforma equivalente) para compartirla, y recopilación de comentarios para iterar mejoras.</label></li>
+  </ul>
+
+  <h2>Semanas 11-13: Proyecto Final e Integración (3 semanas)</h2>
+  <p><strong>Objetivo:</strong> Construir una aplicación completa con API REST integrando un modelo de ML clásico y funcionalidades de IA generativa.</p>
+  <p><strong>Recursos principales:</strong></p>
+  <ul>
+    <li><a href="https://fastapi.tiangolo.com/">FastAPI – Documentation</a>: tutorial oficial del framework FastAPI (documentación completa y ejemplos).</li>
+    <li><a href="https://pyimagesearch.com/2025/03/17/getting-started-with-python-and-fastapi-a-complete-beginners-guide/">FastAPI for Beginners (PyImageSearch)</a>: guía paso a paso para iniciar con FastAPI y Python.</li>
+    <li><a href="https://techcommunity.microsoft.com/t5/educator-developer-blog/build-an-ai-web-app-with-azure-cognitive-services-and-flask/3273489">Microsoft Learn – Build an AI web app with Python</a>: proyecto guiado de ejemplo (usando Flask + Azure Cognitive Services) para construir apps con IA.</li>
+  </ul>
+  <h3>Semana 11: Desarrollo de API con FastAPI</h3>
+  <ul>
+    <li><label><input type="checkbox" data-cat="fastapi"> Días 1-3: Instalación de FastAPI (junto con Uvicorn) y repaso de conceptos REST; creación de primeros endpoints de ejemplo.</label></li>
+    <li><label><input type="checkbox" data-cat="fastapi"> Días 4-5: Uso de Pydantic para validación de datos de entrada en la API y manejo adecuado de errores HTTP (códigos de estado, mensajes).</label></li>
+    <li><label><input type="checkbox" data-cat="fastapi"> Días 6-7: Integración del modelo de ML obtenido en la Semana 6 dentro de un endpoint de la API (por ejemplo, el endpoint de clasificación de logs).</label></li>
+  </ul>
+  <h3>Semana 12: Proyecto Final – Desarrollo de funcionalidades</h3>
+  <ul>
+    <li>
+      <input type="checkbox" data-cat="fastapi" id="task-proyecto-final"> <label for="task-proyecto-final">Días 1-7: Implementación del proyecto <strong>"Plataforma de Análisis de Incidentes"</strong>:</label>
+      <ul>
+        <li>Desarrollar el endpoint <code>/classify</code> para la clasificación ML de logs de seguridad (usando el modelo entrenado previamente).</li>
+        <li>Desarrollar el endpoint <code>/analyze</code> para el análisis generativo de descripciones de incidentes (usando un LLM vía API para resumir y extraer insights).</li>
+        <li>Desarrollar el endpoint <code>/report</code> que combine resultados de <code>/classify</code> y <code>/analyze</code> para generar un reporte completo.</li>
+      </ul>
+    </li>
+  </ul>
+  <h3>Semana 13: Despliegue y cierre del proyecto</h3>
+  <ul>
+    <li><label><input type="checkbox" data-cat="fastapi"> Días 1-3: Containerización de la aplicación con Docker (creación de un <code>Dockerfile</code> sencillo y pruebas locales del contenedor).</label></li>
+    <li><label><input type="checkbox" data-cat="fastapi"> Días 4-5: Pruebas finales de la API (unitarias y de integración); documentación automática de endpoints usando las herramientas integradas de FastAPI (OpenAPI Docs).</label></li>
+    <li><label><input type="checkbox" data-cat="fastapi"> Días 6-7: Preparación de la demo final y presentación: ejecutar la aplicación completa, documentar el proyecto (README, Wiki) y definir próximos pasos o mejoras futuras.</label></li>
+  </ul>
+
+  <h2>Semana 14: Temas Avanzados y Siguientes Pasos (1 semana)</h2>
+  <p><strong>Objetivo:</strong> Explorar tópicos avanzados en IA y desarrollo para complementar la formación, así como consolidar lo aprendido y planificar los siguientes pasos en el aprendizaje.</p>
+  <p><strong>Recursos principales:</strong></p>
+  <ul>
+    <li><a href="https://huggingface.co/learn/nlp-course">Hugging Face – Curso de NLP</a>: tutorial práctico sobre uso de modelos de lenguaje avanzados y fine-tuning (en inglés).</li>
+    <li><a href="https://python.langchain.com/docs/get_started/introduction.html">LangChain Documentation</a>: framework para construir aplicaciones avanzadas con LLMs y datos propios (RAG, agentes) (en inglés).</li>
+    <li><a href="https://fullstackdeeplearning.com/">Full Stack Deep Learning</a>: recursos sobre despliegue y producción de modelos de IA a escala (en inglés).</li>
+  </ul>
+  <h3>Semana 14: Exploración Avanzada</h3>
+  <ul>
+    <li><label><input type="checkbox" data-cat="advanced"> Día 1: Fundamentos de Deep Learning: repaso teórico de redes neuronales (perceptrón, capas ocultas) e implementación de un ejemplo sencillo con una librería (TensorFlow o PyTorch).</label></li>
+    <li><label><input type="checkbox" data-cat="advanced"> Día 2: NLP avanzado: exploración de librerías como Hugging Face Transformers para utilizar modelos de lenguaje pre-entrenados y, opcionalmente, ajustarlos (<em>fine-tuning</em>) con datos propios.</label></li>
+    <li><label><input type="checkbox" data-cat="advanced"> Día 3: Introducción a MLOps: conceptos de despliegue de modelos en producción, monitorización y herramientas como MLflow para el seguimiento de experimentos.</label></li>
+    <li><label><input type="checkbox" data-cat="advanced"> Día 4: Recuperación de información con IA (RAG): uso de bases de datos vectoriales (ej. FAISS o Chroma) y frameworks como LangChain para permitir a un LLM buscar en conocimiento específico y mejorar sus respuestas.</label></li>
+    <li><label><input type="checkbox" data-cat="advanced"> Día 5: Áreas especializadas: introducción a Visión por Computador (Computer Vision) y/o Aprendizaje por Refuerzo, según interés. (Ejemplo: explorar materiales de <a href="https://cs231n.github.io/">CS231n de Stanford</a> para visión por computador).</label></li>
+    <li><label><input type="checkbox" data-cat="advanced"> Día 6: Comunidad y proyectos: participación en foros (Stack Overflow, Reddit <code>r/learnpython</code>) y plataformas de competición (Kaggle) para seguir aprendiendo de la comunidad e intentar proyectos adicionales.</label></li>
+    <li><label><input type="checkbox" data-cat="advanced"> Día 7: Cierre y proyección: repaso de todos los proyectos realizados, actualización del portafolio o CV con las nuevas habilidades, y definición de un plan personal de especialización o certificaciones a futuro.</label></li>
+  </ul>
+
+  <p><strong>Estimación de tiempo de estudio:</strong> Siguiendo un ritmo de 1 hora diaria (7 horas semanales), el plan completo requiere aproximadamente <strong>14 semanas</strong> (unas 98 horas en total):</p>
+  <ul>
+    <li>Semanas 1-3: Python básico funcional</li>
+    <li>Semanas 4-6: Primer modelo de ML operativo</li>
+    <li>Semanas 7-9: Integración de IA generativa en proyectos</li>
+    <li>Semana 10: Prototipado rápido de app con IA generativa</li>
+    <li>Semanas 11-13: Aplicación completa (API REST con ML + IA)</li>
+    <li>Semana 14: Consolidación y temas avanzados</li>
+  </ul>
+
+  <h2>Recursos Complementarios Gratuitos</h2>
+  <p><strong>Repositorios GitHub para consulta:</strong></p>
+  <ul>
+    <li><a href="https://github.com/microsoft/ML-For-Beginners">microsoft/ML-For-Beginners</a>: 26 lecciones estructuradas sobre fundamentos de Machine Learning.</li>
+    <li><a href="https://github.com/tirthajyoti/Machine-Learning-with-Python">tirthajyoti/Machine-Learning-with-Python</a>: colección de ejercicios prácticos de ML con Python.</li>
+    <li><a href="https://cs231n.github.io/">CS231n Stanford</a>: materiales de curso (notas) de visión por computador (nivel avanzado, opcional).</li>
+  </ul>
+  <p><strong>Herramientas de práctica:</strong></p>
+  <ul>
+    <li><a href="https://colab.research.google.com/">Google Colab</a>: entorno online gratuito (con GPU) para experimentar con código Python/IA.</li>
+    <li><a href="https://learn.microsoft.com/es-es/training/education/?terms=labs">Microsoft Learn Labs</a>: laboratorios interactivos sin costo para practicar escenarios de IA y desarrollo.</li>
+    <li><a href="https://www.w3schools.com/python/python_tryit.asp">W3Schools TryPython</a>: entorno rápido para ejecutar ejemplos de código Python en el navegador.</li>
+  </ul>
+  <p><strong>Libros recomendados (ediciones 2022-2025):</strong></p>
+  <p><em>En inglés:</em></p>
+  <ul>
+    <li>"Python Machine Learning" por Sebastian Raschka (4ta edición, 2022).</li>
+    <li>"Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow" por Aurélien Géron (3ra edición, 2023).</li>
+    <li>"Python for Data Analysis" por Wes McKinney (3ra edición, 2022).</li>
+  </ul>
+  <p><em>En español:</em></p>
+  <ul>
+    <li>"Inteligencia Artificial Aplicada a Procesamiento de Lenguaje Natural (NLP) con Python y Machine Learning" – Libro abierto de la Universidad de Minnesota.</li>
+    <li>"Python para todos" (versión actualizada) – Libro introductorio a la programación en Python (disponible en línea).</li>
+    <li>"Los mejores libros sobre inteligencia artificial" – Artículo recopilatorio con recomendaciones de libros en español (actualizado a 2025).</li>
+  </ul>
+  <p><em>Recursos en línea gratuitos:</em></p>
+  <ul>
+    <li><a href="https://www.elementsofai.com/es">Elements of AI</a> (Universidad de Helsinki): curso en línea gratuito (disponible en español) que cubre fundamentos conceptuales de la IA.</li>
+    <li><a href="https://www.kdnuggets.com/10-free-artificial-intelligence-books-for-2025">10 Free Artificial Intelligence Books for 2025</a> (KDnuggets): recopilación actualizada de libros digitales gratuitos de IA.</li>
+  </ul>
+
+  <h2>Consejos para el Éxito</h2>
+  <ul>
+    <li><strong>Consistencia sobre intensidad:</strong> Es mejor estudiar 1 hora diaria constante que intentar sesiones maratónicas ocasionales.</li>
+    <li><strong>Práctica inmediata:</strong> Aplica cada concepto aprendido mediante código o ejercicios el mismo día para afianzar el conocimiento.</li>
+    <li><strong>Proyectos incrementales:</strong> Permite que cada semana construya sobre la anterior, reutilizando y mejorando el código de proyectos previos.</li>
+    <li><strong>Comunidad:</strong> Apóyate en la comunidad (foros, grupos, colegas) para resolver dudas o bloqueos rápidamente y seguir avanzando.</li>
+  </ul>
+
+</main>
+<script>
+  function updateProgress() {
+    const tasks = document.querySelectorAll('input[type=checkbox]');
+    const totalTasks = tasks.length;
+    let completedTasks = 0;
+    tasks.forEach(task => { if (task.checked) completedTasks++; });
+    const overallPercent = Math.round((completedTasks / totalTasks) * 100) || 0;
+    document.getElementById('overall-progress-bar').style.width = overallPercent + '%';
+    document.getElementById('overall-percent').innerText = overallPercent + '%';
+    // Calcular progreso por categoría
+    const categories = {};
+    tasks.forEach(task => {
+      const cat = task.getAttribute('data-cat');
+      if (!categories[cat]) {
+        categories[cat] = { total: 0, completed: 0 };
+      }
+      categories[cat].total += 1;
+      if (task.checked) {
+        categories[cat].completed += 1;
+      }
+    });
+    for (const cat in categories) {
+      const percent = Math.round((categories[cat].completed / categories[cat].total) * 100) || 0;
+      const barEl = document.getElementById('bar-' + cat);
+      const percentEl = document.getElementById('percent-' + cat);
+      if (barEl) barEl.style.width = percent + '%';
+      if (percentEl) percentEl.innerText = percent + '%';
+    }
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('input[type=checkbox]').forEach(cb => {
+      cb.addEventListener('change', updateProgress);
+    });
+    // Inicializar progreso en 0%
+    updateProgress();
+  });
+</script>
+</body>
+</html>
