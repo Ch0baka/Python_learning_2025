@@ -378,5 +378,69 @@
     updateProgress();
   });
 </script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Obtener estado guardado de checkboxes (si existe) desde localStorage
+    let savedStates = JSON.parse(localStorage.getItem('checkboxStates')) || {};
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    // Restaurar cada checkbox según el estado guardado
+    checkboxes.forEach(function(cb) {
+        cb.checked = !!savedStates[cb.id];  // marca como checked si en savedStates es true
+    });
+    // Función para recalcular y actualizar todas las barras de progreso
+    function updateProgress() {
+        let totalChecked = 0;
+        let totalCheckboxes = 0;
+        const categoryCounts = {};
+        // Contabilizar tareas totales y completadas por categoría
+        checkboxes.forEach(function(cb) {
+            const category = cb.dataset.cat;  // categoría desde atributo data-cat
+            totalCheckboxes++;
+            if (!categoryCounts[category]) {
+                categoryCounts[category] = { total: 0, checked: 0 };
+            }
+            categoryCounts[category].total++;
+            if (cb.checked) {
+                categoryCounts[category].checked++;
+                totalChecked++;
+            }
+        });
+        // Actualizar barra de progreso de cada categoría
+        for (let category in categoryCounts) {
+            const progressBar = document.getElementById('progress-' + category);
+            if (progressBar) {
+                progressBar.value = categoryCounts[category].checked;
+                progressBar.max = categoryCounts[category].total;
+            }
+            const percentText = document.getElementById('progress-' + category + '-text');
+            if (percentText) {
+                let percent = (categoryCounts[category].checked / categoryCounts[category].total) * 100;
+                percentText.textContent = percent.toFixed(0) + '%';
+            }
+        }
+        // Actualizar barra de progreso general (todas las categorías)
+        const overallBar = document.getElementById('progress-overall');
+        if (overallBar) {
+            overallBar.value = totalChecked;
+            overallBar.max = totalCheckboxes;
+        }
+        const overallPercentText = document.getElementById('progress-overall-text');
+        if (overallPercentText) {
+            let overallPercent = (totalChecked / totalCheckboxes) * 100;
+            overallPercentText.textContent = overallPercent.toFixed(0) + '%';
+        }
+    }
+    // Llamar a updateProgress() una vez al cargar para reflejar el estado inicial
+    updateProgress();
+    // Guardar cambios en localStorage y actualizar progreso cada vez que cambie un checkbox
+    checkboxes.forEach(function(cb) {
+        cb.addEventListener('change', function() {
+            savedStates[cb.id] = cb.checked;
+            localStorage.setItem('checkboxStates', JSON.stringify(savedStates));
+            updateProgress();
+        });
+    });
+});
+</script>
 </body>
 </html>
